@@ -33,8 +33,8 @@ export class InputToDo extends React.Component {
 	}
 	render() {
 		return (
-			<div className="container text-align-center">
-				<h2>To Do List</h2>
+			<div className="container">
+				<h2 className="text-center">To Do List</h2>
 				<input
 					className="divInput"
 					placeholder="What´s next to be done?"
@@ -44,8 +44,9 @@ export class InputToDo extends React.Component {
 				/>
 				<ul className="list-group">
 					{this.state.messages.map((item, i) => (
-						<li className="list-group-item" key={i}>
+						<li className="list-group-item d-flex" key={i}>
 							{item}
+							<i className="far fa-trash-alt ml-auto" />
 						</li>
 					))}
 				</ul>
